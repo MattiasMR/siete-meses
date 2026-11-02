@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>7 meses 🌷</title>
+  <meta name="description" content="Para mi oruga, de su Monito">
+  <meta name="theme-color" content="#5a1426">
+  <meta property="og:title" content="Para mi oruga 🌷">
+  <meta property="og:description" content="Atrapa 7 corazones para abrir tu cartita">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌷</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 1. Bienvenida -->
+  <section id="intro" class="screen active">
+    <div class="tulips" aria-hidden="true">
+      <svg viewBox="0 0 40 80" style="color:#9b2c45"><path d="M20 38V78" stroke="#4a7c59" stroke-width="3"/><path d="M20 64C11 58 6 48 8 41c6 5 10 12 12 23Z" fill="#5c9a6c"/><path d="M8 14l6 8 6-12 6 12 6-8c2 16-2 26-12 26S6 30 8 14Z" fill="currentColor"/></svg>
+      <svg viewBox="0 0 40 80" style="color:#5a1426"><path d="M20 38V78" stroke="#4a7c59" stroke-width="3"/><path d="M20 60c9-6 14-16 12-23-6 5-10 12-12 23Z" fill="#5c9a6c"/><path d="M8 14l6 8 6-12 6 12 6-8c2 16-2 26-12 26S6 30 8 14Z" fill="currentColor"/></svg>
+      <svg viewBox="0 0 40 80" style="color:#c45a72"><path d="M20 38V78" stroke="#4a7c59" stroke-width="3"/><path d="M20 64C11 58 6 48 8 41c6 5 10 12 12 23Z" fill="#5c9a6c"/><path d="M8 14l6 8 6-12 6 12 6-8c2 16-2 26-12 26S6 30 8 14Z" fill="currentColor"/></svg>
+    </div>
+    <p class="kicker">Desde el 3 de abril</p>
+    <h1>Hola, <em>mi oruga</em></h1>
+    <p class="lead">Llevamos <strong data-days>…</strong> días juntos. Para abrir tu cartita, ayuda al husky a atrapar <strong>7 corazones</strong>, uno por cada mes.</p>
+    <button id="start" class="btn" type="button">Jugar 💕</button>
+    <p class="hint">Muévelo con el dedo, el mouse o las flechas</p>
+  </section>
+
+  <!-- 2. Juego -->
+  <section id="game" class="screen" aria-label="Juego: atrapa los corazones">
+    <canvas id="canvas"></canvas>
+    <div class="hud"><div id="slots" class="slots" aria-live="polite"></div></div>
+    <div id="toast" class="toast" aria-hidden="true"></div>
+    <div id="husky" class="husky" aria-hidden="true">
+      <svg viewBox="0 0 120 110">
+        <path d="M22 52 30 6l22 28Z" fill="#4b5563"/><path d="M27 42l4-25 14 17Z" fill="#f4c6cf"/>
+        <path d="M98 52 90 6 68 34Z" fill="#4b5563"/><path d="M93 42l-4-25-14 17Z" fill="#f4c6cf"/>
+        <ellipse cx="60" cy="62" rx="44" ry="40" fill="#5b6472"/>
+        <path d="M60 40c-10 0-14 12-20 16-14 4-20 18-14 30 8 14 24 18 34 18s26-4 34-18c6-12 0-26-14-30-6-4-10-16-20-16Z" fill="#fff"/>
+        <ellipse cx="43" cy="47" rx="6" ry="4" fill="#fff"/><ellipse cx="77" cy="47" rx="6" ry="4" fill="#fff"/>
+        <circle cx="45" cy="63" r="6" fill="#1f2937"/><circle cx="75" cy="63" r="6" fill="#1f2937"/>
+        <circle cx="47" cy="61" r="2" fill="#fff"/><circle cx="77" cy="61" r="2" fill="#fff"/>
+        <ellipse cx="60" cy="76" rx="7" ry="5" fill="#1f2937"/>
+        <path d="M56 86q4 12 8 0Z" fill="#e88b9a"/>
+        <path d="M52 84q8 6 16 0" stroke="#1f2937" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <ellipse cx="34" cy="78" rx="6" ry="4" fill="#f4a7b4" opacity=".75"/><ellipse cx="86" cy="78" rx="6" ry="4" fill="#f4a7b4" opacity=".75"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 3. Cartita -->
+  <section id="letter" class="screen">
+    <div class="stack">
+      <button id="envelope" class="envelope" type="button" aria-label="Abrir la cartita">
+        <span class="flap"></span>
+        <span class="env-front"></span>
+        <span class="seal">♥</span>
+      </button>
+
+      <article class="paper">
+        <p class="date line" style="--i:0">Feliz 7 meses · <span data-days>…</span> días</p>
+        <p class="greet line" style="--i:1">Mi oruga,</p>
+        <p class="body line" style="--i:2">Te amo mucho. Soy muy feliz contigo, y muero por armar una familia juntos y vivir muchas experiencias juntos.</p>
+        <p class="it line" style="--i:3">Ci vediamo, ti amo.</p>
+        <p class="muaa line" style="--i:4">Muaaaaa 💋</p>
+        <p class="inf line" style="--i:5">Te amo infinito ∞</p>
+        <p class="sign line" style="--i:6">— Monito</p>
+        <div class="replay line" style="--i:7"><button id="replay" class="btn ghost" type="button">Jugar otra vez</button></div>
+      </article>
+    </div>
+    <p id="tap" class="hint">Toca el sobre 💌</p>
+  </section>
+
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <script src="js/main.js"></script>
+</body>
+</html>
